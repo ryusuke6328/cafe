@@ -1,0 +1,400 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+
+}
+img{
+	vertical-align:top;
+}
+/* スクロールCSS */
+.fade-in {
+    opacity: 0;
+    transition-duration: 1000ms;
+    transition-property: opacity, transform;
+  }
+  
+  .fade-in-up {
+    transform: translate(0, 50px);
+  }
+  
+  .fade-in-down {
+    transform: translate(0, -50px);
+  }
+  
+  .fade-in-left {
+    transform: translate(-50px, 0);
+  }
+  
+  .fade-in-right {
+    transform: translate(50px, 0);
+  }
+  
+  .scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+header{
+    position: relative;
+    }
+.drawer{
+    width: 0;
+    height: 0;
+}
+.drawer-item{
+    display: none;
+}
+.menu-btn img{
+    width:100%;
+    max-width: 50px;
+}
+
+.header-wrapper{
+    padding-bottom: 0;
+}
+header img{
+    width: 100%;
+    height: 80vh;
+    padding-bottom: 0;
+    object-fit: cover;
+}
+.header-title{
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 10;
+}
+.header-title h1{
+    font-size: 4rem;
+}
+.header-title p{
+    font-weight:  bold;
+}
+.header-wrapper::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    height: 80vh;
+}
+.sns-icon ul{
+    display: flex;
+    z-index: 10;
+    color: white;
+    position: absolute;
+    top: 5%;
+    right: 15%;
+}
+.sns-icon ul li{
+    list-style: none;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+}
+.sns-icon ul a{
+    text-decoration: none;
+}
+.sns-icon ul a::after{
+    border-bottom: solid 3px white;
+    bottom: 0;
+    content: "";
+    display: block;
+    transition: all .3s ease;
+    width: 0;
+}
+.sns-icon ul a:hover::after{
+    width: 100%;
+}
+
+.sns-icon ul a:nth-child(1)::before{
+    font-family: "Font Awesome 5 Brands";
+    content: '\f16d';
+    font-weight: 900;
+    color: transparent;
+    background-clip:content-box;
+    background: linear-gradient(-135deg, #E4A972, #9941D8);
+    -webkit-background-clip: text;
+    font-size: 2em;
+}
+.sns-icon ul a:nth-child(2)::before{
+    font-family: "Font Awesome 5 Brands";
+    content: '\f099';
+    font-weight: 900;
+    font-size: 2em;
+    color: #00acee;
+}
+nav{
+    background-color: #6E6E6E;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 20rem;
+    height: 5rem;
+    line-height: 1rem;
+}
+nav ul li{
+    display: block;
+    font-weight: bold;
+    list-style: none;
+    font-size: 1.3em;
+    color: white;
+}
+nav ul span{
+    font-size:0.3em;
+    margin-left: 0.3rem;
+}
+nav ul a{
+    text-decoration: none;
+}
+nav ul a li:hover{
+    color: black;
+    transition: 0.3s;
+}
+
+.news-wrapper{
+    position: relative;
+    height: 25rem;
+    background-color: #1F160A;
+    text-align: center;
+    padding-top: 5rem;
+}
+h2{
+    line-height: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.8em;
+}
+h2 span{
+    font-size: 0.5em;
+
+}
+.news-contents{
+    text-align: left;
+    margin-left: 30rem;
+    line-height: 1rem;
+    font-size: 0.9em;
+    color: white;
+}
+.news-wrapper a{
+    position: absolute;
+    right: 18rem;
+    bottom: 8rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.fas{
+    margin-left: 1rem;
+}
+.menu-wrapper{
+    text-align: center;
+    position: relative;
+    height: 700px;
+    background-image: url(images/coffee-3392168_1280.jpg);
+    z-index: -1;
+}
+.menu-wrapper::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    z-index: -1;
+}
+.menu-img{
+    position: relative;
+    display: flex;
+    margin: 0 3rem;
+}
+.menu-img img{
+    height: 13rem;
+    width: 100%;
+    margin-top: 3rem;
+    z-index: 1;
+    object-fit: cover;
+}
+.menu-img p{
+    z-index: 10000;
+    color: white;
+    font-size: 2.5em;
+    line-height: 1.5rem;
+    text-align: left;
+}
+.menu-img span{
+    font-size: 0.4em;
+    font-weight: bold;
+}
+.menu-img .first{
+    position: absolute;
+    top: 4rem;
+    left: 3rem;
+}
+.menu-img .second{
+    position: absolute;
+    top: 4rem;
+    left: 37%;
+}
+.menu-img .third{
+    position: absolute;
+    top: 4rem;
+    left: 70%;
+}
+.menu-wrapper h2{
+    margin-top: 5rem;
+}
+.menu-bottun{
+    position: relative;
+    top:-18rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: -16rem;
+    padding: 0;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 2;
+    overflow: hidden;
+}
+.menu-bottun a{
+    z-index: unset;
+    font-weight: bold;
+    width: 25%;
+    line-height: 1rem;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255, 0.3) ;
+    margin: 2rem;
+    padding: 1.3rem 2rem ;
+    white-space: nowrap;
+    height: 4rem;
+    transition: transform 0.3s ease;
+    transform: rotate3d(1,1,0,1deg);
+    -webkit-transform: rotate3d(1,1,1,1deg) ;
+    will-change: transform;
+}
+.menu-bottun a:hover{
+    transform: rotate3d(1,1,0,180deg);
+    -webkit-transform: rotate3d(1,1,1,360deg);
+} 
+
+/* .menu-btn a:hover{
+    animation: rotate_anime_3d 0.3s linear infinite;
+}
+@keyframes rotate_anime_3d {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}  */
+
+.menu-bottun span{
+    font-size: 0.5em;
+}
+.shop-wrapper{
+    background-color:#1F160A;
+}
+.blog-wrapper{
+    position: relative;
+}
+.blog-wrapper img{
+    margin-top: 8rem;
+    margin-left: 3rem;
+    width: 70%;
+    height: 60vh;
+    object-fit: cover;
+}
+.blog-wrapper a{
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    color: white;
+    width: 13rem;
+    font-size: 2.5em;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+}
+.blog-wrapper a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 80%;
+    right: -2%;
+    width: 2rem;
+    border-top: 2px solid white;
+    transform: rotate(45deg);
+}
+.blog-wrapper a:hover{
+    box-shadow:10px 10px 5px 3px rgba(0, 0, 0, 0.2)
+    ,0px 0px 5px 3px rgba(0, 0, 0, 0.2) inset;
+    width: 15rem;
+    transition: 0.3s;
+}
+.blog-wrapper a:hover::after{
+    display: none;
+}
+.blog-wrapper span{
+    font-size: 0.5em;
+}
+.shop-info{
+    text-align: center;
+    margin-top: 8rem;
+}
+.iframe-wrap{
+    position: relative;
+    width: 100%;
+    padding-top: 25%;
+}
+.iframe-wrap iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+}
+.shop-add{
+    color: white;
+    padding-bottom: 3rem;
+}
+.shop-add p{
+    margin: 0;
+}
+h4{
+    font-size: 1.5em;
+}
+footer{
+    color: white;
+    background-color:#4D4D4D;
+    text-align: center;
+    height: 4rem;
+}
+footer p{
+    padding-top: 2rem;
+    margin: 0;
+    opacity: 0.8;
+}
+
+
+
+
+
